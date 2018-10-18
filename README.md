@@ -10,3 +10,7 @@ The data file is one .csv file consisting of three main parts:
 |Title|the title of the article as it appears on the WikiHow knowledge base|
 |Headline|the concatenation of all the bold lines (the summary sentences) of all the paragraphs serving as the reference summary|
 |Text|the conctenation of all paragraphs (except the bold lines) to generate the article to be summarized|
+
+The data can be downloaded from the link below:
+
+https://ucsb.box.com/s/ap23l8gafpezf4tq3wapr6u8241zz358
