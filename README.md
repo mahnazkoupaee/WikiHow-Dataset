@@ -5,6 +5,8 @@ WikiHow is a new large-scale dataset using the online WikiHow (http://www.wikiho
 
 The data file is one .csv file consisting of three main parts:
 
-|Title|kkc bg|
-|Headline|lrjg|
-|Text|kdfnj|
+|Part|Description|
+|-------|-------------|
+|Title|the title of the article as it appears on the WikiHow knowledge base|
+|Headline|the concatenation of all the bold lines (the summary sentences) of all the paragraphs serving as the reference summary|
+|Text|the conctenation of all paragraphs (except the bold lines) to generate the article to be summarized|
