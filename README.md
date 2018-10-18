@@ -6,6 +6,5 @@ WikiHow is a new large-scale dataset using the online WikiHow (http://www.wikiho
 The data file is one .csv file consisting of three main parts:
 
 |Title|kkc bg|
-|-------|-------------|
 |Headline|lrjg|
 |Text|kdfnj|
