@@ -1,7 +1,7 @@
 # WikiHow-Dataset
 WikiHow: A Large Scale Text Summarization Dataset
 
-WikiHow is a new large-scale dataset using the online WikiHow (http://www.wikihow.com/) knowledge base. The dataset is introduced in https://arxiv.org/abs/1810.09305. Please refer to the paper for more information regarding the dataset and its properties.
+WikiHow is a new large-scale dataset using the online WikiHow (http://www.wikihow.com/) knowledge base <sup>[*](#footnote1)</sup>. The dataset is introduced in https://arxiv.org/abs/1810.09305. Please refer to the paper for more information regarding the dataset and its properties.
 
 Each article consists of multiple paragraphs and each paragraph starts with a sentence summarizing it. By merging the paragraphs to form the article and the paragraph outlines to form the summary, the resulting version of the dataset contains more than 200,000 long-sequence pairs.
 
@@ -32,3 +32,7 @@ The wikihowSep.csv file consisting of each paragraph and its summary:
 This file contains separate paragraphs as the articles and the bold lines corresponding to each paragraph as the reference summary. The data can be downloaded from the link below:
 
 https://ucsb.box.com/s/7yq601ijl1lzvlfu4rjdbbxforzd2oag
+
+
+
+<a name="footnote1">*</a>: Article provided by wikiHow, a wiki building the world's largest, highest quality how-to manual. Content on wikiHow can be shared under a Creative Commons License (CC-BY-NC-SA).
