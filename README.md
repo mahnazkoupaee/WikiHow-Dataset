@@ -38,3 +38,11 @@ https://ucsb.box.com/s/7yq601ijl1lzvlfu4rjdbbxforzd2oag
 
 
 <a name="footnote1">*</a>: The articles are provided by wikiHow, a wiki building the world's largest, highest quality how-to manual. Content on wikiHow can be shared under a [Creative Commons License](https://creativecommons.org/licenses/by-nc-sa/3.0/) (CC-BY-NC-SA).
+
+
+# Data Processing
+To process the csv file and create the article files, use process.py. After running this code, you will have a directory of files, each containing an article and its summary sentences. 
+
+The titles.txt file contains the name of all articles in the dataset. Three separate files (all_train, all_val, all_test) contain the titles of the articles used as train/dev/test sets to generate results in the paper. (the titles are derived from the "title" column by extracting and concatenating the alphanumeric values)
+
+Note that the articles are added regularly to the wikihow knowledge base. Therefore, there might be new articles in the csv file which are not in the titles file.
