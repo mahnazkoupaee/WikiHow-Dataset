@@ -5,6 +5,7 @@ Each summary line starts with tag "@summary" and the article is followed by "@ar
 '''
 import pandas as pd
 import os
+import re
 
 # read data from the csv file (from the location it is stored)
 Data = pd.read_csv(r'wikihowAll.csv')
@@ -24,9 +25,14 @@ for row in range(rows):
     article = Data.ix[row,'text']           # text is the column representing the article
 
     #  a threshold is used to remove short articles with long summaries as well as articles with no summary
-    if len(abstract) < (0.75*len(article)):  
-        abstract = abstract.encode('utf-8')  
+    if len(abstract) < (0.75*len(article)):
+        # remove extra commas in abstracts
+        abstract = abstract.replace(".,",".")
+        abstract = abstract.encode('utf-8')
+        # remove extra commas in articles
+        article = re.sub(r'[.]+[\n]+[,]',".\n", article)
         article = article.encode('utf-8')
+        
 
         # a temporary file is created to initially write the summary, it is later used to separate the sentences of the summary
         with open('temporaryFile.txt','wb') as t:
@@ -46,7 +52,7 @@ for row in range(rows):
             with open('temporaryFile.txt','r') as t:
                 for line in t:
                     line=line.lower()
-                    if line != "\n":
+                    if line != "\n" and line != "\t" and line != " ":
                         f.write(b'@summary'+b'\n')
                         f.write(line.encode('utf-8'))
                         f.write(b'\n')
