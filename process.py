@@ -21,8 +21,8 @@ if not os.path.exists(path): os.makedirs(path)
 
 # go over the all the articles in the data file
 for row in range(rows):
-    abstract = Data.ix[row,'headline']      # headline is the column representing the summary sentences
-    article = Data.ix[row,'text']           # text is the column representing the article
+    abstract = Data.loc[row,'headline']      # headline is the column representing the summary sentences
+    article = Data.loc[row,'text']           # text is the column representing the article
 
     #  a threshold is used to remove short articles with long summaries as well as articles with no summary
     if len(abstract) < (0.75*len(article)):
@@ -40,7 +40,7 @@ for row in range(rows):
         
         # file names are created using the alphanumeric charachters from the article titles.
         # they are stored in a separate text file.
-        filename = Data.ix[row,'title']
+        filename = Data.loc[row,'title']
         filename = "".join(x for x in filename if x.isalnum())
         filename1 = filename + '.txt'
         filename = filename.encode('utf-8')
